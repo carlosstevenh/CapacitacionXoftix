@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+            <div class="col-sm-8 jumbotron">
+                <div class="text-center">
+                    <h3>{{title}}</h3>
+                </div>
+                <table class="table">
+                        <thead>
+                            <tr>
+                            <th>Tipo identificación</th>
+                            <th>Identificación</th>
+                            <th> Nombre</th>
+                            <th>Fecha nacimieto</th>
+                            <th>Genero</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users">
+                                <td>{{user.tipoIdentificacion}}</td>
+                                <td>{{user.identificacion}}</td>
+                                <td>{{user.nombre}} {{user.apellido}} </td>
+                                <td>{{user.fechaNacimiento}}</td>
+                                <td>{{user.genero}}</td>
+                            </tr>   
+                        </tbody>
+                      </table>      
+            </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+      
+      

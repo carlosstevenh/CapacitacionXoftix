@@ -1,0 +1,12 @@
+<h3>{{title}}</h3>
+<form [formGroup]="myForm" (ngSubmit)="register()" novalidate > 
+    <label for="">Digité identificación: </label><br>
+    <input type="number" formControlName = "ide" required placeholder="Identificación"><br>
+    <button type="submit" class="btn btn-primary" >Buscar</button>
+  </form>
+<div *ngIf="user!=null">
+  <p>Identificación: {{user.identificacion}}</p>
+  <p>Nombre: {{user.nombre}} {{user.apellido}}</p>
+  <p>Fecha nacimiento: {{user.fechanacimiento}}</p>
+  <p>Genero: {{user.genero}}</p>
+</div>
